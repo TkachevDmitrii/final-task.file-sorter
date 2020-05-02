@@ -40,7 +40,9 @@ def sorter(src_dir, dst_dir):
                             except AttributeError:
                                 print(f'Что-то не так с файлом: {file.name} AttributeError')
                                 continue
-
+                            except NotImplementedError:
+                                print(f'Что-то не так с файлом: {file.name} AttributeError')
+                                continue
                             except PermissionError:
                                 print(f'Нет прав на изменение файла: {file.name}')
                                 continue
